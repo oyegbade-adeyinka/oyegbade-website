@@ -46,6 +46,7 @@ header{
     z-index: 1; 
     top: 0;
     left: 0;
+    box-shadow: rgba(0,0,0,0.1)0px 10px 20px, rgba(0,0,0,0.1)0px 6px 6px;
 }
 header h1 {
     border: 5px solid rgb(109, 106, 106);
@@ -56,7 +57,8 @@ nav {
     background-color: #F4F4F4;
     padding: 20px;
     position: sticky;
-    top: 100px;    
+    top: 100px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;    
 }
 nav ul {
     white-space: nowrap;
@@ -94,10 +96,12 @@ article p{
     text-align: center;
     margin: 80px 0;
     white-space: nowrap;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }   
 .images1{ 
     text-align: center;
     margin: 0px 0;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
 .images1 li{
     display: inline-block;
@@ -119,6 +123,7 @@ section.join{
     text-align: center;
     padding: 60px 20px;
     color: #4b4b4b;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 .join h2{
     font-size: 36px;
