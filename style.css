@@ -4,6 +4,11 @@ body, ul, li, h1, h2, a {
     font-family: arial;
     
 }
+*{
+    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 
 
@@ -55,24 +60,29 @@ header h1 {
 }
 nav {
     background-color: #F4F4F4;
-    padding: 20px;
+    
     position: sticky;
     top: 100px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;    
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    z-index: 1;    
 }
 nav ul {
     white-space: nowrap;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
 }
  nav li{
      width:25%;
      display: inline-block;
      font-size: 18px;
+     position: relative;
+    text-align: center; 
+    /* margin-bottom: 12px; */
  }
 nav li a{
     text-decoration: none;
-    color: #4b4b4b
+    color: rgb(87, 87, 87);
 }
 nav li a.join{
     color:rgb(250, 157, 157)
@@ -142,10 +152,39 @@ footer{
 }
 /*pseudo classes*/
 nav li a:hover{
-    font-size:1.2em;
-    background-color: rgb(241, 241, 241);
-    padding:3px ;
+    /* font-size:1.2em; */
+    color: rgb(0, 0, 0);
+    /* padding:3px ;  */
+    transition: 0.4s;
 }
+
+  
+nav li a:after {
+    content: "";
+    display: block;
+    opacity: 0;
+    background-color: #303030;
+    width: 30%;
+    height: 3px;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 0px;
+  /*   position: absolute; */
+    bottom: 0px;
+  }
+   nav li a:hover:after { 
+    opacity: 1;
+    animation: expand .2s;
+   }
+  @keyframes expand {
+    from {
+      width: 15%;
+    }
+    to {
+      width: 30%;
+    }
+}
+  
 .logo:hover{
     position:relative;
     top:-2px;
@@ -176,10 +215,6 @@ h2 p::after{
     .banner .welcome h2{
         font-size:20px;
     }  
-
-
-
-
 }
 @media screen and (max-width:900px){
     
@@ -252,11 +287,18 @@ h2 p::after{
 }
 @media screen and (max-width:388px){
     .logotext{
-        position: relative;
+      
         font-size: 14px;
         top: 27%;
-        left: 0%;
+        left: 0%; 
+        display:inline-block;
+        position: relative;
     }  
+    .logo{
+        width: 80px;
+        height: 56.34px;
+        display: block;
+    }
     
 }
 
