@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400;1,800;1,900&display=swap');
+
 body, ul, li, h1, h2, a {
     margin: 0;
     padding: 0;
-    font-family: arial;
+    font-family:'poppins', arial;
     
 }
 *{
@@ -9,6 +11,7 @@ body, ul, li, h1, h2, a {
   margin: 0;
   padding: 0;
 }
+
 .btn{
     cursor:crosshair;
     /* I am using this because i love mobile games */
@@ -78,11 +81,12 @@ body, ul, li, h1, h2, a {
 }
 .banner .welcome{
     position: absolute;
-    left:0px;
+    left:650px;
     top:73.2%;
-    background-color: rgb(34, 0, 48);
-    color:white;
-    padding: 30px;
+    /* background-color: rgb(34, 0, 48); */
+    /* color:white; */
+    padding:0 .5em;
+    
 } 
 .banner h2{
     font-size: 25px;
@@ -98,7 +102,7 @@ header{
     z-index: 1; 
     top: 0;
     left: 0;
-    box-shadow: rgba(0,0,0,0.1)0px 10px 20px, rgba(0,0,0,0.1)0px 6px 6px;
+    box-shadow: rgba(0,0,0,0.05)0px 10px 20px, rgba(0,0,0,0.05)0px 6px 6px;
 }
 header h1 {
     border: 5px solid rgb(109, 106, 106);
@@ -146,6 +150,20 @@ main{
     padding: 0 40px;
     box-sizing: border-box;
 }
+.featured{
+position: relative;
+}
+.featured::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #E5D5FA;
+    top: -60px;
+    left: -50px;
+    z-index: -1;
+  }
 article h2 {
     color:#000000; 
     font-size: 35px;
@@ -410,4 +428,32 @@ h2 p::after{
     } 
 }
 
+@media screen and (max-width:447px){
+    .banner .welcome{
+        left:180px;
+        top: 9em;
+        width: 20px;
+        
+        
+    }
+
+
+
+}
+
+.circle{
+    animation: circleAnim 1s infinite alternate-reverse;
+}
+@keyframes circleAnim {
+    from {
+        transform: translate(262px, 798px);
+        z-index:5;
+    }
+    to {
+        transform: translate(262px, 830px);
+    }
+    
+}
+    
+    
 

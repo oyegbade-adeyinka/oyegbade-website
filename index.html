@@ -13,14 +13,27 @@
         <!-- <h1 class="logotext">Oyegbade Adeyinka</h1> -->
         <span class="btn">Oyegbade Adeyinka </span>
     </header>
-    <section class="banner">
+   <div class="banner1">
+
+    
+    <section class="banner stagger1">
+        
         <!-- <img src="OYEGBADE NEON.jpg" alt="oyegbade"> -->
         <img src="OYEGBADE-FORTNITE.jpg" alt="oyegbade">
-        <div class="welcome">
-            <h2>Welcome to <br><span>Oyegbade Blog</span></h2>
+        <div class="welcome stagger1">
+            <!-- <h2>Welcome to <br><span>Oyegbade Blog</span></h2> -->
+            <svg class="stagger1" width="40" height="77" viewBox="0 0 40 77">
+                <g id="scroll" transform="translate(-253 -787)">
+                  <g id="Rectangle_12" data-name="Rectangle 12" transform="translate(253 787)" fill="none" stroke="#fff" stroke-width="4">
+                    <rect width="40" height="77" rx="20" stroke="none"/>
+                    <rect x="2" y="2" width="36" height="73" rx="18" fill="none"/>
+                  </g>
+                  <circle class="circle" id="Ellipse_1" data-name="Ellipse 1" cx="11" cy="11" r="11" transform="translate(262 798)" fill="#fff"/>
+                </g>
+            </svg>
         </div>
     </section>
-    <nav class="main-nav">
+    <nav class="main-nav hero-design">
         <ul>
             <li class="nav"><a href="index.html" class="join">Home</a></li>
             <li><a href="#">About</a></li>
@@ -37,14 +50,16 @@
         
     </nav> -->
     <main>
-        <article>
-            <h2>It's me, Oyegbade</h2>
+        <article class="featured ">
+            
+            <h2 class="transition2">It's me, Oyegbade</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta eius, ea doloribus adipisci natus rem ut necessitatibus, fuga assumenda porro dolorem aperiam totam nobis eos! Quisquam accusantium exercitationem mollitia dicta.
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae libero illo asperiores similique eos culpa ducimus enim dignissimos saepe molestiae esse cum ea voluptates, voluptas a! Deleniti magni odit nulla.
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut nostrum quisquam suscipit officia nesciunt voluptate dolorem facilis soluta, repellat eos, quas optio repellendus architecto earum! Ipsa suscipit voluptates deserunt voluptas.
             </p>
+        
         </article>
-        <ul class="images">
+        <ul class="images transition2">
             <li><img src="oyegbade-retro.jpg" alt="oyegbade"></li>
             <li><img src="do-more1.jpg" alt="do more"></li>
         </ul>
@@ -64,6 +79,62 @@
     <footer>
         <p class="copyright">Copyright 2021 Oyegbade</p>
     </footer> 
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        var tl = gsap.timeline();
+
+        tl.from('.banner1', {
+            y: '-30%',
+            opacity: 0,
+            duration: 2,
+            ease: Power4.easeOut
+        })
+        tl.from('.stagger1', {
+            opacity: 0,
+            y: -50,
+            stagger: .3,
+            ease: Power4.easeOut,
+            duration: 2
+        }, "-=1.5")
+        tl.from('.hero-design', {
+            opacity: 0, y: 50, ease: Power4.easeOut, duration: 1
+        }, "-=2")
+
+        gsap.from(".square-anim", {
+            stagger: .2,
+            scale: 0.1,
+            duration: 1,
+            ease: Back.easeOut.config(1.7)
+        })
+
+        gsap.from(".transition2", {
+            scrollTrigger: {
+                trigger: '.transition2',
+                start: "top bottom"
+            },
+            y: 50,
+            opacity: 0,
+            duration: 1.2,
+            stagger: .3
+        })
+
+        gsap.from(".transition3", {
+            scrollTrigger: {
+                trigger: ".transition3",
+                start: "top center"
+            },
+            y: 50,
+            opacity: 0,
+            duration: 1.2,
+            stagger: .6
+        });
+    </script>
+
 
 </body>
 </html>
