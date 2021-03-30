@@ -94,15 +94,36 @@ body, ul, li, h1, h2, a {
 .banner h2 span{
     font-size: 1.3em;
 }
+
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
 header{
-    background-color:rgb(253, 237, 237);
+    /* background-color:rgb(253, 237, 237); */
     padding: 20px;
-    position:fixed;
+    /* position:fixed; */
+    position:absolute;
     width: 100%;
     z-index: 1; 
     top: 0;
     left: 0;
-    box-shadow: rgba(0,0,0,0.05)0px 10px 20px, rgba(0,0,0,0.05)0px 6px 6px;
+    /* box-shadow: rgba(0,0,0,0.05)0px 10px 20px, rgba(0,0,0,0.05)0px 6px 6px; */
 }
 header h1 {
     border: 5px solid rgb(109, 106, 106);
@@ -118,7 +139,8 @@ nav {
     background-color: #F4F4F4;
     
     position: sticky;
-    top: 100px;
+    /* top: 100px; */
+    top:0;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     z-index: 1;    
 }
@@ -392,7 +414,7 @@ h2 p::after{
 }
 @media screen and (max-width:700px){
     header{
-        position: relative;
+        /* position: relative; */
     }
     nav {
         top: 0px;    
