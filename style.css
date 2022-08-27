@@ -430,11 +430,13 @@ h2 p::after{
 @media screen and (max-width:388px){
     .btn{
       
-        font-size: 9px;
-        top: 70px;
-        left: 90px;
+        .btn{
+        font-size: 5px;
+        top:-10px;
+        left: 140px;
         /* display:inline-block; */
         position: relative;
+        padding: 3px;
     }  
     .logo{
         width: 80px;
