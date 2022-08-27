@@ -430,7 +430,6 @@ h2 p::after{
 @media screen and (max-width:388px){
     .btn{
       
-        .btn{
         font-size: 5px;
         top:-10px;
         left: 140px;
