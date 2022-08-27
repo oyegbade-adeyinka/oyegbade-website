@@ -406,7 +406,7 @@ h2 p::after{
         width: 30px;
         height: 30px;
         position: absolute;
-        left: 140px;
+        left: 200px;
     }
 }
 @media screen and (max-width:411px){
@@ -448,7 +448,7 @@ h2 p::after{
         width: 30px;
         height: 30px;
         position: absolute;
-        left: 140px;
+        left: 280px;
     }
     
 }
